@@ -1,0 +1,40 @@
+@charset "UTF-8";
+
+body {
+	text-align: center;
+}
+
+h1 {
+	padding-top: 15px;
+}
+
+p {
+	font-size: 15pt;
+}
+
+#total {
+	margin: 0px auto;
+	padding: 0px;
+	width: 80%;
+	height: 70%;
+	border: 1px solid black;
+	text-align: center;
+}
+
+table {
+	margin:  0px auto;
+	margin-bottom: 20px;
+	padding:  10px;
+	width: 50%;
+	border: 1px solid black;
+}
+
+table tr {
+	padding: 5px;
+	border: 1px solid red;
+}
+
+select {
+	width: 100px;
+	height: 21px;
+}

@@ -24,16 +24,17 @@
 				
 				<script type="text/javascript">					
 					function checkNick() {
-						var nick = document.getElementById("nick").value;
-						var nickling = nick.replace(/\s/gi,"");
-						
+						let nick = document.querySelector('#nick').value;
+						let nickling = nick.replace(/\s/gi,"");
+					
 						if (nick == "") {
 							alert("닉네임을 입력해주세요");
-							document.getElementById("nick").focus();
+							document.querySelector('#nick').focus();
 						} else {							
 							nick.innerHTML = nickling.value;
 							alert(nickling+"은/는 사용가능한 닉네임입니다. 사용하시겠습니까?");
-							document.getElementById("ID").focus();
+							document.querySelector('#ID').focus();
+							document.qeurySelector('#nick').readOnly = true;
 						}
 					}
 				</script>
@@ -42,11 +43,28 @@
 		</tr>
 			<tr>
 			<td>아이디</td>
-			<td><input id="ID" type="text">		<button>중복확인</button></td>
+			<td><input id="ID" type="text">		
+				<button id="idBTN" onclick="checkID()">중복확인</button>
+							
+				<script type="text/javascript">					
+					function checkID() {
+						let id = document.querySelector('#ID').value;
+						let idling = id.replace(/\s/gi,"");
+						
+						if (id == "") {
+							alert("아이디를 입력해주세요");
+							document.querySelector('#ID').focus();
+						} else {							
+							alert(idling+"은/는 사용가능한 닉네임입니다. 사용하시겠습니까?");
+							document.querySelector('#PW').focus();
+						}
+					}
+				</script>
+			</td>
 		</tr>
 			<tr>
 			<td>비밀번호</td>
-			<td><input type="text"></td>
+			<td><input id="PW" type="text"></td>
 		</tr>
 			<tr>
 			<td>비밀번호 확인</td>
